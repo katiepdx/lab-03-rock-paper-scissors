@@ -15,19 +15,21 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 20vh;
+    padding: 2%;
+    margin: 3px;
     border: solid 2px black;
 }
 
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50px;
+}
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
 }
-
-  
 
 header {
     display: flex;
@@ -38,7 +40,7 @@ header {
 }
 
 footer {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     bottom: 0;
     height: 10%;
@@ -49,4 +51,21 @@ footer {
     background-color: lightblue;
 }
   
+input {
+    display: none;
+}
 
+input:checked + img {
+    border: rgba(206, 72, 23, 0.671) 5px solid;
+}
+
+label {
+    margin: 10px;
+}
+
+button {
+    margin: 2%;
+    font-size: 20px;
+    background-color: palegreen;
+    border-radius: 40px;
+}
