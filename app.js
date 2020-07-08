@@ -19,10 +19,15 @@ console.log(playersLosses);
 const totalDraws = document.querySelector('.total-draws');
 console.log(totalDraws);
 
+// Global State 
+// let userWins = 0;
+// let userLosses = 0;
+// let gameDraws = 0;
+
 // initialize state
 playButton.addEventListener('click', () => {
     //do this
-    console.log('test')
+    console.log('test');
 });
 
 
