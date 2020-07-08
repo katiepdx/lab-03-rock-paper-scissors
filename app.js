@@ -26,6 +26,8 @@ console.log(totalDraws);
 // let userLosses = 0;
 // let gameDraws = 0;
 
+let computersChoice = getRandomThrow();
+
 // initialize state
 playButton.addEventListener('click', () => {
     computersResults.textContent = getRandomThrow();
