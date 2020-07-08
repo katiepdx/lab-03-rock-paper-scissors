@@ -20,6 +20,10 @@ const totalDraws = document.querySelector('.total-draws');
 console.log(totalDraws);
 
 // initialize state
+playButton.addEventListener('click', () => {
+    //do this
+    console.log('test')
+});
 
 
 // set event listeners to update state and DOM
