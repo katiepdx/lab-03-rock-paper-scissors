@@ -5,7 +5,6 @@
     // If random number is between 0.33-0.66, return paper
     // If random number is between 66-1, return scissors
    
-
 export function getRandomThrow(){
     let randomNumber = Math.random();
     if ((randomNumber > 0) && (randomNumber < 0.33)) {
@@ -20,6 +19,3 @@ export function getRandomThrow(){
     }
 }
 
-// export function checkResult {
-//     //do this
-// }

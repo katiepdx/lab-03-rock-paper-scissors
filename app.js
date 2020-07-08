@@ -1,3 +1,5 @@
+import { getRandomThrow } from './gameUtils.js'
+
 // import functions and grab DOM elements
 const gameTiles = document.querySelector('.game-tiles');
 console.log(gameTiles);
@@ -26,8 +28,8 @@ console.log(totalDraws);
 
 // initialize state
 playButton.addEventListener('click', () => {
-    //do this
-    console.log('test');
+    computersResults.textContent = getRandomThrow();
+
 });
 
 
