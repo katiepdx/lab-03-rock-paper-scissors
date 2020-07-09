@@ -3,23 +3,31 @@
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
-}
 
 body {
-    background-color: lightyellow;
+    height: 100vh;
+    width: 100vw;
+    min-width: 60vw;
+    background-color: lightcoral;
 }
+/* 
+.game-rules {
+    height: 100vh;
+    width: 100vw;
+} */
 
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 section {
-    width: 1000px;
+    height: 100vh;
+    width: 100vw;
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -27,7 +35,8 @@ section {
     align-items: center;
     padding: 2%;
     margin: 3px;
-    border: solid 2px black;
+    border: dashed 5px grey;
+    background-color: white;
 }
 
 img {
@@ -42,18 +51,16 @@ h2 {
 }
 
 header {
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    font-size: 2em;
+    text-align: center;
+    font-size: 4em;
     font-weight: bold;
     background-color: pink;
 }
 
-footer {
-    width: 100vw;
-    height: 10vh;
-    background-color: lightblue;
-}
   
 input {
     display: none;
