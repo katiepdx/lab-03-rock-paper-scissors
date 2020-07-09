@@ -5,6 +5,7 @@ const gameTiles = document.querySelector('.game-tiles');
 console.log(gameTiles);
 
 const playButton = document.querySelector('.button');
+const resetButton = document.querySelector('.reset-button');
 
 console.log(playButton);
 const gameData = document.querySelector('.game-data');
@@ -19,13 +20,17 @@ const playersLosses = document.querySelector('.players-losses');
 console.log(playersLosses);
 const totalDraws = document.querySelector('.total-draws');
 console.log(totalDraws);
+const totalScoreResets = document.querySelector('.total-score-resets');
+console.log(totalScoreResets);
 
-// Global State 
+
+// Initialize Global State 
 let userWins = 0;
 let userLosses = 0;
 let gameDraws = 0;
+let gameResets = 0;
 
-// initialize state
+// set event listeners to update state and DOM
 playButton.addEventListener('click', () => {
     let computersChoice = getRandomThrow();
     let playerChecked = document.querySelector('input:checked');
@@ -36,7 +41,6 @@ playButton.addEventListener('click', () => {
     roundResults.textContent = oneRoundResult;
     if (oneRoundResult === 'You win!') {
         userWins = userWins + 1;
-        console.log(userWins);
         playersWins.textContent = userWins;
     } else if (oneRoundResult === 'You lose!') {
         userLosses = userLosses + 1;
@@ -47,5 +51,16 @@ playButton.addEventListener('click', () => {
     }
 });
 
-
+// Reset all scores button
 // set event listeners to update state and DOM
+resetButton.addEventListener('click', () => {
+    // reset scores on click
+    let confirmReset = confirm('Are you sure you want to reset all scores?');
+    if (confirmReset === true) {
+        location.reload();
+    } else {
+        return;
+    }
+});
+
+
