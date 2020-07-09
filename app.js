@@ -34,6 +34,12 @@ let gameResets = 0;
 playButton.addEventListener('click', () => {
     let computersChoice = getRandomThrow();
     let playerChecked = document.querySelector('input:checked');
+    // Reminds user to make a choice if no choice is selected
+    if (playerChecked === null) {
+        alert('Please make a choice');
+        return;
+    }
+
     let playersChoice = playerChecked.value;
     computersResults.textContent = computersChoice;
     
@@ -57,10 +63,19 @@ resetButton.addEventListener('click', () => {
     // reset scores on click
     let confirmReset = confirm('Are you sure you want to reset all scores?');
     if (confirmReset === true) {
-        location.reload();
+        gameResets = gameResets + 1;
+        totalScoreResets.textContent = gameResets;
+        
+        userWins = 0;
+        playersWins.textContent = userWins;
+
+        userLosses = 0;
+        playersLosses.textContent = userLosses;
+
+        gameDraws = 0;
+        totalDraws.textContent = gameDraws;
     } else {
         return;
     }
 });
-
 
