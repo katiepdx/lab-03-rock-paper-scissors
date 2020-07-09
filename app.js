@@ -20,6 +20,8 @@ const playersLosses = document.querySelector('.players-losses');
 console.log(playersLosses);
 const totalDraws = document.querySelector('.total-draws');
 console.log(totalDraws);
+const totalRounds = document.querySelector('.total-rounds');
+console.log(totalRounds);
 const totalScoreResets = document.querySelector('.total-score-resets');
 console.log(totalScoreResets);
 
@@ -28,10 +30,14 @@ console.log(totalScoreResets);
 let userWins = 0;
 let userLosses = 0;
 let gameDraws = 0;
+let totalGameRounds = 0;
 let gameResets = 0;
 
 // set event listeners to update state and DOM
 playButton.addEventListener('click', () => {
+    totalGameRounds = totalGameRounds + 1;
+    totalRounds.textContent = totalGameRounds;
+
     let computersChoice = getRandomThrow();
     let playerChecked = document.querySelector('input:checked');
     // Reminds user to make a choice if no choice is selected
@@ -74,6 +80,9 @@ resetButton.addEventListener('click', () => {
 
         gameDraws = 0;
         totalDraws.textContent = gameDraws;
+
+        totalGameRounds = 0;
+        totalRounds.textContent = totalGameRounds;
     } else {
         return;
     }
