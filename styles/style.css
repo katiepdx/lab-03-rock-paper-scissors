@@ -44,8 +44,6 @@ section {
     display: flex;
     text-align: center;
     align-items: center;
-    position: ;
-    border: solid yellow;
 }
 
 .game-results {
@@ -55,7 +53,6 @@ section {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    border: solid yellow;
 }
 
 img {
