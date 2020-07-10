@@ -1,6 +1,6 @@
 *{
 	box-sizing: border-box;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -10,11 +10,6 @@ body {
     min-width: 60vw;
     background-color: lightcoral;
 }
-/* 
-.game-rules {
-    height: 100vh;
-    width: 100vw;
-} */
 
 main {
     display: flex;
@@ -22,7 +17,6 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
 }
 
 section {
@@ -39,10 +33,32 @@ section {
     background-color: white;
 }
 
+section {
+    height: 100%;
+    width: 100%;
+}
+
+.game-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.game-results {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
 img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50px;
+    height: 70%;
+    width: 90%;
+    border-radius: 20%;
 }
 
 h2 {
